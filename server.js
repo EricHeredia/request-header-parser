@@ -31,7 +31,7 @@ app.get("/api/hello", function (req, res) {
 
 // My code here
 app.get('/api/whoami', (req, res) => {
-  let ip = req.headers
+  let ip = req.headers['x-forwarded-for']
   console.log(ip)
   res.json({ip: ip})
 })
