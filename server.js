@@ -21,6 +21,8 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+// trust proxy
+app.set('trust proxy', true);
 
 // your first API endpoint... 
 app.get("/api/hello", function (req, res) {
