@@ -31,7 +31,6 @@ app.get("/api/hello", function (req, res) {
 
 // My code here
 app.get('/api/whoami', (req, res) => {
-  let ip = req.headers['x-forwarded-for']
   let language = req.headers['accept-language']
   let software = req.headers['user-agent']
   console.log(req.headers)
