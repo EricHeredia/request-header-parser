@@ -31,7 +31,8 @@ app.get("/api/hello", function (req, res) {
 
 // My code here
 app.get('/api/whoami', (req, res) => {
-  res.json({ip: req.connection.remoteAddress})
+  let ip = req.headers['x-appengine-user-ip']
+  res.json({ip: ip})
 })
 
 // listen for requests :)
