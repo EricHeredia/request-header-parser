@@ -29,7 +29,7 @@ app.get("/api/hello", function (req, res) {
 
 // My code here
 app.get('/api/whoami', (req, res) => {
-  res.send(req.ip)
+  res.send(req.connection.remoteAddress)
 })
 
 // listen for requests :)
