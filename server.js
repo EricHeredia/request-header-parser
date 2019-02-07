@@ -34,7 +34,7 @@ app.get('/api/whoami', (req, res) => {
   let ip = req.headers['x-forwarded-for']
   let language = req.headers['accept-language']
   let software = req.headers['user-agent']
-  console.log(ip)
+  console.log(req.headers)
   res.json({ip: ip, language: language, software: software})
 })
 
